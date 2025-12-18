@@ -23,4 +23,13 @@ size_t write_callback(void *ptr, size_t size, size_t nmemb, void *userdata)
   mem->data[mem->size] = '\0';
   return total;
 }
+int compare_deals(const void *a, const void *b)
+{
+  Deal *da = (Deal *)a;
+  Deal *db = (Deal *)b;
+  if(da->price < db->price) return -1;
+  else if(da->price > db->price) return 1;
+  else return 0;
+}
+
 
