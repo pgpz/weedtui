@@ -10,7 +10,7 @@ size_t write_callback(void *ptr, size_t size, size_t nmemb, void *userdata)
 }
 int main(void)
 {
-CIR: *curl = curl_easy_init();
+CURL *curl = curl_easy_init();
   if(curl)
   {
     curl_easy_setopt(curl, CURLOPT_URL, "");
